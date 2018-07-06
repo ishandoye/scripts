@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "This script is use to check the File type"
+
+echo -e ""
+
+echo "Please add the File/Directory Name"
+read filename
+
+#if [ -e $filename ];then
+     if [ -f $filename ]; then
+     result=$( file $filename|cut -d\  -f2- )
+     echo "The $filename is a $result"
+     exit 0
+           elif [ -d $filename ];then
+           result=$( file $filename|cut -d\  -f2- )
+           echo "The $filename is a $result"
+           exit 1
+             elif [ ! -e $filename ];then
+		echo "The $filename is not present on the given location please check the file Name."
+		exit 2
+		else
+		echo "The $filename is a other type of file."
+exit 2
+fi
+fi
+fi
+
+
+

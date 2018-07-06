@@ -1,0 +1,4 @@
+#!/bin/bash
+
+B=`hostname`
+echo This script is Running on "$B" Where `hostname` is the output of the "hostname" command.

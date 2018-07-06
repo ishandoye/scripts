@@ -1,0 +1,14 @@
+#!/bin/bash
+function hello() {
+for i in $@
+do
+echo "Hello! $i"
+done
+#user
+#}
+#function user() {
+#
+#echo "$@"
+}
+hello jason ishan papi
+echo "$?"

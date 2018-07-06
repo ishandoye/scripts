@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Checking for shadowing...... "
+if [ -e "/etc/shadow" ];then
+echo "##++++Shadow password are enabled.++++##"
+else
+echo ""
+echo "##++++Shadow password are disable++++##"
+fi
+echo ""
+echo "############################"
+echo ""
+echo " Checking if the file is writable....."
+if [ -w "/etc/shadow" ];then
+echo "##++++You have permission to edit the /etc/shadow file.++++##"
+else
+echo "##++++You do not have permission to edit the /etc/shadow file.##++++"
+echo ""
+\n
+fi
+

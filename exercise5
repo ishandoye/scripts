@@ -1,0 +1,9 @@
+#!/bin/bash
+
+B=("Man" "Bear" "Pig" "Dog" "Cat" "Sheep")
+
+for i in ${B[@]}
+do
+echo -e "$i"
+
+done

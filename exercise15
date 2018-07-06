@@ -1,0 +1,19 @@
+#!/bin/bash
+
+function file_count() {
+dis_name
+IFS=';' read -ra IN1 <<< "$IN"
+#for i in ${path[@]}
+for i in ${IN1[@]}
+do 
+local count=$( ls -l $i | wc -l )
+echo "The total number of files available in the $directoryname is: $count"
+done
+
+}
+function dis_name() {
+#path=(/etc /var /usr/bin)
+IN="/etc;/var;/usr/bin"
+
+}
+file_count

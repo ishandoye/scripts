@@ -1,0 +1,12 @@
+#!/bin/bash
+echo " This script is to check the File Type"
+echo -e ""
+#echo "Please enter the File/Directory Name:"
+#read filename
+for var in "$@"
+do
+result=$( file $var|cut -d\  -f2- )
+echo "The $var is $result"
+
+ls -l $var
+done
