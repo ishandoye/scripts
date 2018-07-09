@@ -1,0 +1,8 @@
+#!/bin/bash
+### This is a script for inheritance of functions.#########
+installed_all ()
+{ yum list installed --disableexcludes=all
+updates_all () { yum check-update --disableexcludes=all; }
+}
+installed_all
+updates_all 
